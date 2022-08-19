@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        /*INPUT[type="text"]{
+            background: #ffffff;
+            border: 3px solid white;
+            border-radius: 10px;
+            border: 2px solid ;
+        }
+        INPUT[type="text"]:hover{
+            border: 2px solid red;
+        }*/
+        .focused {
+            outline: solid 2px red;
+        }
+    </style>
+</head>
+<body>
+<form id="formElement">
+    One: <input type="text"><br>
+    Two: <input type="text">
+</form>
+<script>
+    formElement.addEventListener("focusin", () => formElement.classList.add('focused'));
+    formElement.addEventListener("focusout", () => formElement.classList.remove('focused'));
+    /*let formElement = document.forms['formElement'];
+
+    formElement.focusin = function(evt) {
+        let activeElement = formElement.querySelector('.focused');
+        if (1) {
+            activeElement.classList.remove('focused');
+        }
+        activeElement.classList.add('focused');
+    };
+
+    formElement.focusout = function(evt) {
+        let activeElement = formElement.querySelector('.focused');
+        if (1) {
+            activeElement.classList.remove('focused');
+        }
+    };*/
+</script>
+</body>
+</html>
